@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  @apply max-w-[1280px] mx-auto p-8 text-center;
+}
+
+@layer components {
+  .fog {
+    @apply h-[333px] w-[333px] bg-[url("/images/fog_sprite_4.webp")];
+    animation: fogAnimation 0.3s steps(4) 1;
+  }
+}
+
+@keyframes fogAnimation {
+  from { background-position: 0px; }
+  to { background-position: -1332px; }
+}
+
+html, body {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
